@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 
 import com.ib.custom.toast.CustomToastView;
@@ -21,6 +23,9 @@ public class AddProduct extends AppCompatActivity implements View.OnClickListene
     private EditText txtValor;
     private EditText txtDescription;
     private Spinner spinnerProduct;
+
+    RadioButton radioSi, radioNo;
+
     private Button btnAdd;
 
     Modelo modelo = Modelo.getInstance();
@@ -36,6 +41,9 @@ public class AddProduct extends AppCompatActivity implements View.OnClickListene
         txtValor = findViewById(R.id.txtValor);
         txtDescription = findViewById(R.id.txtDescription);
         spinnerProduct = (Spinner)findViewById(R.id.spinnerProduct);
+
+        radioSi = (RadioButton) findViewById(R.id.radioSi);
+        radioNo = (RadioButton) findViewById(R.id.radioNo);
 
         Product product1 = new Product(1, "Arroz", 1500, true, "Roa", "Grano");
         Product product2 = new Product(2, "Leche", 2300, false, "lateos", "lateos");
@@ -68,6 +76,7 @@ public class AddProduct extends AppCompatActivity implements View.OnClickListene
             double valor = Double.parseDouble(txtValor.getText().toString());
             String description = txtDescription.getText().toString();
             String category = spinnerProduct.getSelectedItem().toString();
+            boolean haveIva;
 
             if(name.isEmpty()){
                 CustomToastView.makeInfoToast(this,"Descripcion vacia",R.layout.custom_toast).show();
@@ -81,7 +90,14 @@ public class AddProduct extends AppCompatActivity implements View.OnClickListene
                 CustomToastView.makeInfoToast(this,"Categoria vacia",R.layout.custom_toast).show();
             }
 
-            Product product = new Product(code, name, valor, true, description, category);
+            if (radioSi.isChecked()){
+                haveIva = true;
+            }else {
+                haveIva = false;
+            }
+
+            Log.d("Radio Button",haveIva+"");
+            Product product = new Product(code, name, valor, haveIva, description, category);
             modelo.addProduct(product);
 
             /*Iterator itr = list.getListProducts().iterator();
@@ -93,6 +109,7 @@ public class AddProduct extends AppCompatActivity implements View.OnClickListene
             //Intent intent = new Intent(this, ShowProduct.class);
             //startActivity(intent);
 
+            CustomToastView.makeInfoToast(this,"Se registro Correctamente",R.layout.custom_toast).show();
             clearfields();
         }
     }

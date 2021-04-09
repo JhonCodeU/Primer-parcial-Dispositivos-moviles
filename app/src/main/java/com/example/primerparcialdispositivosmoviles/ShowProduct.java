@@ -44,7 +44,7 @@ public class ShowProduct extends AppCompatActivity {
             suma = suma + modelo.getListProducts().get(i).getValor();
 
             if (modelo.getListProducts().get(i).isConIva() == false){
-                cuerpo += modelo.getListProducts().get(i).getNombre()+": "+modelo.getListProducts().get(i).isConIva()+"\n";
+                cuerpo += modelo.getListProducts().get(i).getNombre()+": "+"No tiene iva"+"\n";
             }
         }
 
