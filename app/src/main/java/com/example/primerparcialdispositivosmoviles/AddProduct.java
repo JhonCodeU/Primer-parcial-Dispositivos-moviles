@@ -23,7 +23,6 @@ public class AddProduct extends AppCompatActivity implements View.OnClickListene
     private Spinner spinnerProduct;
     private Button btnAdd;
 
-    ListProducts list = new ListProducts();
     Modelo modelo = Modelo.getInstance();
 
     @Override
@@ -44,13 +43,13 @@ public class AddProduct extends AppCompatActivity implements View.OnClickListene
         Product product4 = new Product(5, "Galletas", 5000, true, "harina", "harina");
         Product product5 = new Product(6, "Zanahoria", 4000, true, "verduras", "verduras");
 
-        list.addProduct(product1);
-        list.addProduct(product2);
-        list.addProduct(product3);
-        list.addProduct(product4);
-        list.addProduct(product5);
+        modelo.addProduct(product1);
+        modelo.addProduct(product2);
+        modelo.addProduct(product3);
+        modelo.addProduct(product4);
+        modelo.addProduct(product5);
 
-        int number = list.getListProducts().size();
+        int number = modelo.getListProducts().size();
         Log.v("Cantidad", number+"");
 
 
@@ -79,7 +78,7 @@ public class AddProduct extends AppCompatActivity implements View.OnClickListene
             }
 
             Product product = new Product(code, name, valor, true, description, category);
-            list.addProduct(product);
+            modelo.addProduct(product);
 
             /*Iterator itr = list.getListProducts().iterator();
 
