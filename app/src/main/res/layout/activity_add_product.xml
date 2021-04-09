@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddProduct">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="287dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="44dp"
+        android:text="Crear nuevo producto"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtCodigo"
+        android:layout_width="322dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Codigo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/txtValor"
+        android:layout_width="325dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Valor"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <EditText
+        android:id="@+id/txtDescription"
+        android:layout_width="325dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Descripcion categoria"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtValor" />
+
+    <Spinner
+        android:id="@+id/spinnerProduct"
+        android:layout_width="329dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="36dp"
+        android:entries="@array/cargo_arrays"
+        android:prompt="@string/productos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescription" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="203dp"
+        android:layout_height="47dp"
+        android:text="Add product"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerProduct"
+        app:layout_constraintVertical_bias="0.311" />
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="325dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCodigo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
