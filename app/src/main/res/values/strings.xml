@@ -1,11 +1,12 @@
 <resources>
     <string name="app_name">Primer parcial dispositivos moviles</string>
-    <string name="productos">Escoja su cargo</string>
 
+    <string name="productos">Escoja una categoria</string>
     <string-array name="cargo_arrays">
-        <item>Categoria 1</item>
-        <item>Categoria 2</item>
-        <item>Categoria 3</item>
-        <item>Categoria 4</item>
+        <item>Lateos</item>
+        <item>Verduras</item>
+        <item>Dulces</item>
+        <item>Grano</item>
+        <item>Tipo de carne</item>
     </string-array>
 </resources>

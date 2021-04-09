@@ -2,7 +2,7 @@ package com.example.primerparcialdispositivosmoviles;
 
 import java.util.Iterator;
 
-public class Product {
+public class Product implements Comparable<Product>{
 
     private int codigo;
     private String nombre;
@@ -68,4 +68,14 @@ public class Product {
         this.categoria = categoria;
     }
 
+    @Override
+    public int compareTo(Product o) {
+        if (o.getValor()> valor){
+            return -1;
+        }else if(o.getValor() > valor){
+            return 0;
+        }else {
+            return 1;
+        }
+    }
 }

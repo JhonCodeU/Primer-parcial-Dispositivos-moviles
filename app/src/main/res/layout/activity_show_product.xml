@@ -8,9 +8,105 @@
 
     <TextView
         android:id="@+id/tvProm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="237dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
         android:text="Promedio"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="219dp" />
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvMasCostosos"
+        android:layout_width="296dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="4dp"
+        android:text="result2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/tvMenosCostosos"
+        android:layout_width="301dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="12dp"
+        android:text="result1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="267dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="48dp"
+        android:text="Consultar Productos"
+        android:textSize="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="301dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="12dp"
+        android:text="Los 10 productos menos costosos"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSinIva" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="297dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="8dp"
+        android:text="Los 10 productos más costosos"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMenosCostosos" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="297dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="16dp"
+        android:text="Promedio"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMasCostosos" />
+
+    <TextView
+        android:id="@+id/tvSinIva"
+        android:layout_width="302dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        android:text="result sin iva"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSinIva" />
+
+    <TextView
+        android:id="@+id/txtSinIva"
+        android:layout_width="295dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="12dp"
+        android:textSize="18dp"
+        android:text="Productos exento de iva"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,7 +10,7 @@
         android:id="@+id/textView"
         android:layout_width="271dp"
         android:layout_height="37dp"
-        android:layout_marginTop="256dp"
+        android:layout_marginTop="220dp"
         android:text="Empresa de alimentos"
         android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,12 +35,36 @@
         android:layout_height="43dp"
         android:layout_marginTop="36dp"
         android:text="Ver productos"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAddProduct"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/btnAddProduct" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="176dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="56dp"
+        android:text="Nota:"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.273"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnShowProducts"
+        app:layout_constraintVertical_bias="0.896" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="294dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="120dp"
+        android:text="Este sistema ya tiene unos datos de prueba - Att: Jhon Arcila castaño"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
