@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,6 +23,9 @@ public class AddProduct extends AppCompatActivity implements View.OnClickListene
     private Spinner spinnerProduct;
     private Button btnAdd;
 
+    ListProducts list = new ListProducts();
+    Modelo modelo = Modelo.getInstance();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +37,22 @@ public class AddProduct extends AppCompatActivity implements View.OnClickListene
         txtValor = findViewById(R.id.txtValor);
         txtDescription = findViewById(R.id.txtDescription);
         spinnerProduct = (Spinner)findViewById(R.id.spinnerProduct);
+
+        Product product1 = new Product(1, "Arroz", 1500, true, "Roa", "Grano");
+        Product product2 = new Product(2, "Leche", 2300, false, "lateos", "lateos");
+        Product product3 = new Product(3, "Yogurt", 1000, true, "lateos", "lateos");
+        Product product4 = new Product(5, "Galletas", 5000, true, "harina", "harina");
+        Product product5 = new Product(6, "Zanahoria", 4000, true, "verduras", "verduras");
+
+        list.addProduct(product1);
+        list.addProduct(product2);
+        list.addProduct(product3);
+        list.addProduct(product4);
+        list.addProduct(product5);
+
+        int number = list.getListProducts().size();
+        Log.v("Cantidad", number+"");
+
 
         btnAdd.setOnClickListener(this);
     }
@@ -59,20 +79,16 @@ public class AddProduct extends AppCompatActivity implements View.OnClickListene
             }
 
             Product product = new Product(code, name, valor, true, description, category);
+            list.addProduct(product);
 
-            ListProducts list = new ListProducts();
-            list.setListProducts(product);
-
-            Iterator itr = ListProducts.iterator();
+            /*Iterator itr = list.getListProducts().iterator();
 
             while(itr.hasNext()){
                 Product st= (Product)itr.next();
                 System.out.println(st.getNombre()+" "+st.getDescripcion()+" "+st.getValor());
-            }
-
-            Intent intent = new Intent(this, ShowProduct.class);
-            intent.putExtra("listProducts", ListProducts);
-            startActivity(intent);
+            }*/
+            //Intent intent = new Intent(this, ShowProduct.class);
+            //startActivity(intent);
 
             clearfields();
         }
