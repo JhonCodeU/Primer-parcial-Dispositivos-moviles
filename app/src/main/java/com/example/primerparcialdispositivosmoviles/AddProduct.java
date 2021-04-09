@@ -49,17 +49,11 @@ public class AddProduct extends AppCompatActivity implements View.OnClickListene
         Product product2 = new Product(2, "Leche", 2300, false, "lateos", "lateos");
         Product product3 = new Product(3, "Yogurt", 1200, false, "lateos", "lateos");
         Product product4 = new Product(4, "Galletas", 5400, true, "harina", "harina");
-        Product product5 = new Product(5, "Zanahoria", 3300, true, "verduras", "verduras");
-        Product product6 = new Product(6, "Verduras", 800, false, "lateos", "lateos");
-        Product product7 = new Product(7, "chocolate", 2200, false, "dulces", "dulces");
 
         modelo.addProduct(product1);
         modelo.addProduct(product2);
         modelo.addProduct(product3);
         modelo.addProduct(product4);
-        modelo.addProduct(product5);
-        modelo.addProduct(product6);
-        modelo.addProduct(product7);
 
         int number = modelo.getListProducts().size();
         Log.v("Cantidad", number+"");

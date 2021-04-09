@@ -66,11 +66,10 @@ public class ShowProduct extends AppCompatActivity {
 
         for(Product aux: modelo.getListProducts()){
             contador++;
-            Log.v("orden", aux.getNombre()+" "+aux.getValor());
 
-            cuerpo += aux.getNombre()+" "+aux.getValor()+"\n";
-            if (contador == 10){
-                break;
+            if (contador < 10){
+                Log.v("orden", aux.getNombre()+" "+aux.getValor());
+                cuerpo += aux.getNombre()+" "+aux.getValor()+"\n";
             }
         }
         tvMenosCostoso = findViewById(R.id.tvMenosCostosos);
@@ -86,11 +85,10 @@ public class ShowProduct extends AppCompatActivity {
 
         for(Product aux: modelo.getListProducts()){
             contador++;
-            Log.v("orden", aux.getNombre()+" "+aux.getValor());
 
-            cuerpo += aux.getNombre()+" "+aux.getValor()+"\n";
-            if (contador == 10){
-                break;
+            if (contador < 10){
+                Log.v("orden", aux.getNombre()+" "+aux.getValor());
+                cuerpo += aux.getNombre()+" "+aux.getValor()+"\n";
             }
         }
         tvMasCostoso = findViewById(R.id.tvMasCostosos);
