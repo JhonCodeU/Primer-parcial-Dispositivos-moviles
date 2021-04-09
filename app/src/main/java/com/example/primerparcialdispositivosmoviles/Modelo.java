@@ -33,4 +33,6 @@ public class Modelo {
     public ArrayList<Product> getListProducts() {
         return listProducts;
     }
+
+
 }
